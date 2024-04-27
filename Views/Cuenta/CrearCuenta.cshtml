@@ -1,0 +1,34 @@
+
+@model CuentaBancarias.Models.Cuenta
+
+
+<h2>Crear Cuenta Bancaria</h2>
+
+@using (Html.BeginForm("CrearCuenta", "Cuentas", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.NombreTitular)
+        @Html.TextBoxFor(model => model.NombreTitular, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.NombreTitular)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.TipoCuenta)
+        @Html.TextBoxFor(model => model.TipoCuenta, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.TipoCuenta)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SaldoInicial)
+        @Html.TextBoxFor(model => model.SaldoInicial, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.SaldoInicial)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email)
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Crear Cuenta</button>
+}

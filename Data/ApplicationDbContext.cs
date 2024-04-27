@@ -9,4 +9,5 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
+        public DbSet<CuentaBancarias.Models.Cuenta> DataCuenta {get; set; }
 }
